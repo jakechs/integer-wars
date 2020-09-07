@@ -41,11 +41,14 @@ function setButtonState(gameState) {
 			$('#deal').hide();
 			break;
 	}
+	// Update Debug
+	console.log('Player Hand', player_hand);
+	console.log('Comp Hand', comp_hand);
 }
 
 setButtonState(GAME_STATES.BUSY);
 
-cards.init({table:'#card-table', type:STANDARD, cardsUrl: 'libs/cards.js/img/cards.png'});
+cards.init({table:'#card-table', type:STANDARD, cardsUrl: 'node_modules/cards.js/img/cards.png'});
 window.cards = cards;
 
 var deck = new cards.Deck();

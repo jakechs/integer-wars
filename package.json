@@ -4,11 +4,16 @@
   "description": "Browser Card Game for Learning Integers",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "cards.js": "jakechs/cards.js#gh-pages"
+    "cards.js": "jakechs/cards.js#gh-pages",
+    "jquery": "^1.9.1"
+  },
+  "devDependencies": {
+    "http-server": "^0.12.3"
   }
 }
