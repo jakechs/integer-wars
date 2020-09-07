@@ -1,0 +1,14 @@
+{
+  "name": "integer-wars",
+  "version": "0.1.0",
+  "description": "Browser Card Game for Learning Integers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cards.js": "jakechs/cards.js#gh-pages"
+  }
+}
