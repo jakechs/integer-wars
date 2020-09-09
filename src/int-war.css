@@ -57,16 +57,46 @@ a:visited {color:blue;}
 	left:310px;
 	top:170px;
 }
-#playerWin {
+#warButton {
 	position: absolute;
-	left:400px;
-	top:220px;
+	left:310px;
+	top:170px;
+	width: 150px;
 }
-#compWin {
+#compInstructions {
 	position: absolute;
-	left:400px;
-	top:125px;
+	left: 10px;
+	bottom: 20px;
+	width: 125px;
+	background-color: lightgray;
+	font-size: 11px;
+	text-align: center;
+	padding: 5px;
+	border-radius: 5px;
 }
+
+#computerLabel {
+	position:absolute;
+	left: 150px;
+	top: 0;
+}
+#computerLabel {
+	position:absolute;
+	left: 150px;
+	top: 5px;
+	width: 100px;
+	text-align: center;
+	font-weight: bolder;
+}
+#playerLabel {
+	position:absolute;
+	left: 150px;
+	bottom: 5px;
+	width: 100px;
+	text-align: center;
+	font-weight: bolder;
+}
+
 
 footer {
 	font-size : 12px;
