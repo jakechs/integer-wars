@@ -10,10 +10,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "cards.js": "jakechs/cards.js#gh-pages",
-    "jquery": "^1.9.1"
-  },
-  "devDependencies": {
-    "http-server": "^0.12.3"
+    "cards.js": "jakechs/cards.js#gh-pages"
   }
 }

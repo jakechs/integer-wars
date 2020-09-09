@@ -247,11 +247,11 @@ comp_hand.click(function() {
 
 $('#warButton').click(function () {
 	var diff = diffCards(player_hand.topCard(), comp_hand.topCard());
-	// console.warn(testCards(player_hand.topCard(), comp_hand.topCard()));
-	/* if (diff !== 0) {
+	console.warn(testCards(player_hand.topCard(), comp_hand.topCard()));
+	if (diff !== 0) {
 		alert ('Sorry, that\'s not right...');
 		return;
-	}*/
+	}
 	setButtonState(GAME_STATES.WAR_START);
 
 	player.deal(2, [player_war_stakes], 200, () => {
