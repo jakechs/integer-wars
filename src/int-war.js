@@ -54,8 +54,8 @@ function cardIntValue (card) {
 	var positiveNumber = (pSuits.indexOf(card.suit) >= 0);
 
 	var value = card.rank;
-
-	if (value === 1 || value > 10) {
+	// Aces, jokers, face cards are value 10
+	if (value < 2 || value > 10) {
 		value = 10;
 	}
 
