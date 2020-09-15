@@ -62,7 +62,7 @@ function cardIntValue (card) {
 
 	var value = card.rank;
 
-	// Face cards > 10, jokers = 0
+	// Face cards > 10, jokers = 0, normalize to 10. Aces are low, leave at 1
 	if (value > 10 || value == 0) {
 		value = 10;
 	}
