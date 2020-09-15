@@ -12,17 +12,38 @@
 		<img class="preload" src="node_modules/cards.js/img/cards.png"/>
 
 		<div id="card-table">
+			<div class="correctionBox">
+				<h2>Oops, that's not quite right.</h2>
+				<div class="numberLine">
+
+				</div>
+				<div id="playerCardIndicator">
+					<span class="indicatorLabel">Your Card</span>
+					<span class="indicatorValue" id="playerCardValue"></span>
+				</div>
+				<div id="computerCardIndicator">
+					<span class="indicatorLabel">Your Card</span>
+					<span class="indicatorValue" id="computerCardValue"></span>
+				</div>
+			</div>
+
 			<button id="deal">DEAL</button>
 			<button id="compare">Compare</button>
 			<button id="warButton">WAR! (Same Value)</button>
 			<div id="compInstructions"> ℹ️ Click the bigger card. Remember some cards are negative. If they're the same then that means WAR!</div>
 			<div id="computerLabel">Computer</div>
-		    <div id="playerLabel">Player</div>
+			<div id="playerLabel">Player</div>
+			<div class="scorebox player">
+				<div id="playerScore">0</div>
+			</div>
+			<div class="scorebox computer">
+				<div id="computerScore">0</div>
+			</div>
 		</div>
 		<footer>
-			Developed by team Tobinite for educational purposes. Work based on cards.js, created by <a href="http://einaregilsson.com">Einar Egilsson</a> and is licensed
+			Developed by Team Tobinite for educational purposes. Work based on cards.js, created by <a href="http://einaregilsson.com">Einar Egilsson</a> and is licensed
 			under the MIT license. The card images were created by <a href="http://nicubunu.ro">Nicu Buculei</a> and are
-			in the public domain. 
+			in the public domain. Source code available on <a href="https://github.com/jakechs/integer-wars">GitHub</a>.
 		</footer>
 		<!-- load this at the bottom so the #card-table element exists -->
 		<script src="node_modules/cards.js/deckType.js"></script>

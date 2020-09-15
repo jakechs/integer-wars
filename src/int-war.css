@@ -66,7 +66,7 @@ a:visited {color:blue;}
 #compInstructions {
 	position: absolute;
 	left: 10px;
-	bottom: 20px;
+	bottom: 100px;
 	width: 125px;
 	background-color: lightgray;
 	font-size: 11px;
@@ -78,23 +78,66 @@ a:visited {color:blue;}
 #computerLabel {
 	position:absolute;
 	left: 150px;
-	top: 0;
-}
-#computerLabel {
-	position:absolute;
-	left: 150px;
-	top: 5px;
+	top: 3px;
 	width: 100px;
 	text-align: center;
 	font-weight: bolder;
+	color: white;
+	text-shadow: darkslategray 2px 2px;
+	font-size:28px;
 }
 #playerLabel {
 	position:absolute;
 	left: 150px;
-	bottom: 5px;
+	bottom: 3px;
 	width: 100px;
 	text-align: center;
 	font-weight: bolder;
+	color: white;
+	text-shadow: #111 2px 2px;
+	font-size:28px;
+}
+
+#compare {
+	display:none;
+}
+
+.scorebox {
+	width: 50px;
+	height: 50px;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size: 28px;
+	text-align: center;
+	background-color: white;
+	border: 2px solid;
+	position: absolute;
+	left: 50px;
+	padding-top: 6px;
+	box-sizing: border-box;
+}
+
+.scorebox.player {
+	bottom: 50px;
+	border: 2px solid orangered;
+}
+
+.scorebox.computer {
+	top: 50px;
+	border: 2px solid darkslategray;
+}
+
+.correctionBox {
+	display:none;
+    width: 500px;
+    height: 250px;
+    background-color: white;
+    z-index: 100000;
+    position: absolute;
+    left: 50px;
+    top: 75px;
+    border: 2px dashed red;
+    box-shadow: 1px 1px 5px 0 black;
+    border-radius: 5px;
 }
 
 

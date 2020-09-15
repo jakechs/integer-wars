@@ -6,9 +6,15 @@
 "use strict";
 /* global cards, window */
 
+function updateScore() {
+	document.getElementById('playerScore').innerText = player_spoils.length || 0;
+	document.getElementById('computerScore').innerText = comp_spoils.length || 0;
+}
+
 function toTheVictor(winnersSpoils, callback) {
 	player_hand.deal(1, [winnersSpoils], 100);
 	comp_hand.deal(1, [winnersSpoils], 100, function() {
+		updateScore();
 		callback();
 	});
 }
@@ -20,6 +26,7 @@ function warVictor(winnersSpoils, callback){
 		comp_war_stakes.deal(2, [winnersSpoils], 300, function() {
 			player_war_hand.deal(1, [winnersSpoils], 150);
 			comp_war_hand.deal(1, [winnersSpoils], 150, function() {
+				updateScore();
 				callback();
 			});
 		});
@@ -30,6 +37,7 @@ var GAME_STATES = {
 	BUSY: 'busy',
 	READY: 'ready',
 	COMPARE: 'compare',
+	CORRECTION: 'correction',
 	WAR_START: 'war_start',
 	WAR_END: 'war_end'
 }
@@ -37,7 +45,6 @@ var GAME_STATES = {
 var POS = {
 	player: {x: 200, y: 320},
 	player_hand: {x: 300, y: 320},
-	player_spoils: {x: 450, y: 320},
 	player_spoils: {x: 450, y: 320},
 	comp: {x: 200, y:80},
 	comp_hand: {x: 300, y:80},
@@ -55,7 +62,8 @@ function cardIntValue (card) {
 
 	var value = card.rank;
 
-	if (value === 1 || value > 10) {
+	// Face cards > 10, jokers = 0
+	if (value > 10 || value == 0) {
 		value = 10;
 	}
 
